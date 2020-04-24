@@ -1,6 +1,7 @@
-import { of } from "rxjs";
-import { map } from "rxjs/operators";
+import { from } from "rxjs";
+import { max, min } from "rxjs/operators";
 
-map((x) => x * x)(of(1, 2, 3, 4)).subscribe((v) =>
-  console.log(`Output is: ${v}`)
-);
+const numbers = [1, 6, 15, 10, 58, 2, 40];
+from(numbers)
+  .pipe(max((a, b) => a - b))
+  .subscribe((x) => console.log("The Max value is " + x));
