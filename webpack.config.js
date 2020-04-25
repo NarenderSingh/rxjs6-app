@@ -2,7 +2,7 @@ var path = require("path");
 
 module.exports = {
   entry: {
-    app: "./src/ajax.js",
+    app: "./src/from.js",
   },
   output: {
     path: path.resolve(__dirname, "dist"),
